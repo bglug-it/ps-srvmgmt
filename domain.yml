@@ -7,6 +7,10 @@ servernetmask: 255.255.255.0
 servernet: 172.16.254.0
 servergw: 172.16.254.1
 serverfqdn: pdc.topolin.ia
+wan0mode: dhcp 
+wan0ip: dhcp
+wan0netmask: dhcp 
+wan0gateway: dhcp
 domainshort: TOPOLIN
 domainfull: topolin.ia
 dhcprange_start: 172.16.254.10
