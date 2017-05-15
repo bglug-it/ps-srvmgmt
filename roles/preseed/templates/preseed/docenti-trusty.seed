@@ -40,17 +40,17 @@ d-i	apt-setup/partner			boolean true
 # Setup and enable libreoffice PPA
 d-i	apt-setup/local0/repository		string	http://{{ execpath }}ppa.launchpad.net/libreoffice/ppa/ubuntu trusty main
 d-i 	apt-setup/local0/comment		string LibreOffice Official PPA
-d-i 	apt-setup/local0/key 			string http://keyserver.ubuntu.com:11371/pks/lookup?search=0x36E81C9267FD1383FCC4490983FBA1751378B444&op=get
+d-i 	apt-setup/local0/key 			string http://keyserver.ubuntu.com/pks/lookup?search=0x36E81C9267FD1383FCC4490983FBA1751378B444&op=get
 
 # Setup and enable ansible PPA
 d-i	apt-setup/local1/repository		string http://{{ execpath }}ppa.launchpad.net/ansible/ansible/ubuntu trusty main
 d-i	apt-setup/local1/comment		string Ansible Official PPA
-d-i	apt-setup/local1/key			string http://keyserver.ubuntu.com:11371/pks/lookup?search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367&op=get	
+d-i	apt-setup/local1/key			string http://keyserver.ubuntu.com/pks/lookup?search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367&op=get	
 
 # Setup and enable epoptes PPA
 d-i	apt-setup/local2/repository		string	http://{{ execpath }}ppa.launchpad.net/epoptes/ppa/ubuntu trusty main
 d-i 	apt-setup/local2/comment		string Epoptes stable repository
-d-i 	apt-setup/local2/key 			string http://keyserver.ubuntu.com:11371/pks/lookup?search=0x2D9B9274D3DF9D7CD7281A3E49F26CB30350B375&op=get
+d-i 	apt-setup/local2/key 			string http://keyserver.ubuntu.com/pks/lookup?search=0x2D9B9274D3DF9D7CD7281A3E49F26CB30350B375&op=get
 
 # Setup and enable geogebra repository
 d-i	apt-setup/local3/repository		string http://{{ execpath }}/www.geogebra.net/linux stable main
