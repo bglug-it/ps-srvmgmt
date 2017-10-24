@@ -7,6 +7,10 @@ servernetmask: 255.255.255.0
 servernet: 172.16.254.0
 servergw: 172.16.254.1
 serverfqdn: pdc.topolin.ia
+wan0mode: dhcp 
+wan0ip: dhcp
+wan0netmask: dhcp 
+wan0gateway: dhcp
 domainshort: TOPOLIN
 domainfull: topolin.ia
 dhcprange_start: 172.16.254.10
@@ -29,3 +33,6 @@ mirror_host: it.archive.ubuntu.com
 #mirror_security_path: /ubuntu
 client_gitbranch: master
 #client_gitrepo: "https://github.com/bglug-it/client-pull-installation.git"
+client_admin_username: bglug
+client_admin_fullname: BGLUG User
+client_admin_crypted_password: $6$S8u22loyR$RJZUtmnqmadvas13BxjPkBjdcF1o6P0xGtweZ9MkUCKIbyzmzQFxvwPTwoX1AaPgRyNmvdevyUgs/AMRGH8O./

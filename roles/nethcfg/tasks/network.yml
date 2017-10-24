@@ -1,8 +1,13 @@
 ---
 # Reconfiguring network interfaces
 
-- name: Configuring external NIC
+- name: Configuring external NIC (dhcp)
   shell: /sbin/e-smith/db networks setprop {{ extnic }} role red bootproto dhcp 
+  when: ansible_local.domain.wan0mode == "dhcp"
+
+- name: Configuring external NIC (static)
+  shell: /sbin/e-smith/db networks setprop {{ extnic }} role red bootproto none ipaddr {{ ansible_local.domain.wan0ip}} netmask {{ ansible_local.domain.wan0netmask }} gateway {{ ansible_local.domain.wan0gateway }}
+  when: ansible_local.domain.wan0mode == "static"
 
 - name: Configuring internal NIC
   shell: /sbin/e-smith/db networks setprop {{ intnic }} role green ipaddr {{ ansible_local.domain.serverip }} netmask {{ ansible_local.domain.servernetmask }}

@@ -34,16 +34,11 @@ Open up the file `roles/init/tasks/mgmtuser.yml`, find out `password:` and then 
 
 ## *bglug* user (client side but preseeded) ##
 
-The definition of password for *bglug* is inside `*.seed` files, inside [`server-config`][1]. Create a new password hash with:
+Create a new password hash with:
 
 	$ mkpasswd -m sha-512
 
-Copy the hash in your clipboard; clone the repository, then in the working directory:
-
-	$ find . -iname \*.seed -exec $EDITOR {} \;
-	
-Within each `*.seed` file, search for the string `user-password-crypted` string and change following hash.
-
+Copy the hash after the colon of the option client_admin_crypted_password in `domain.yml`.
 ## *admin* user (domain valid) ##
 
 Password must be specified within NethServer interface for the *admin* user and must be absolutely equal to the one contained inside vault file.
